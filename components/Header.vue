@@ -88,8 +88,6 @@ onMounted(() => {
     class="bg-gray-100 px-8 py-6 flex items-center justify-between font-roboto relative"
   >
     <div class="font-['Ultra'] text-2xl tracking-wider text-gray-900">BK</div>
-
-    <!-- Mobile hamburger menu button -->
     <button
       aria-label="Toggle menu"
       class="lg:hidden relative z-30 focus:outline-none w-10 h-8"
