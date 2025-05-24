@@ -11,7 +11,7 @@
       <div class="flex items-center gap-4">
         <SocialLink
           icon="logos:instagram-icon"
-          href="https://instagram.com/bianca.karoline"
+          href="https://instagram.com/ibiancakaroline"
           label="Instagram"
           color="gray-600"
         />

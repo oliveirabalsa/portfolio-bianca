@@ -15,14 +15,14 @@
         <ContactButton
           icon="logos:whatsapp-icon"
           label="Whatsapp"
-          href="https://wa.me/5511999999999"
+          href="https://wa.me/5511954500665"
           variant="whatsapp"
         />
 
         <ContactButton
           icon="material-symbols:mail"
           label="Email"
-          href="mailto:bianca@example.com"
+          href="mailto:bianca_karoline.2000@hotmail.com"
           variant="email"
         />
 
