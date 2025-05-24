@@ -14,7 +14,6 @@ const props = defineProps<{
       :alt="props.title"
       class="w-full h-60 object-cover rounded-t-lg"
       loading="lazy"
-      provider="ipx"
     />
     <div class="p-4">
       <h2 class="text-2xl font-bold my-3">{{ props.title }}</h2>
