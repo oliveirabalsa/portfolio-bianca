@@ -4,6 +4,8 @@
 <template>
   <div>
     <Header />
-    <h1>Contact</h1>
+    <UnderConstruction />
+    <ContactSection />
+    <Footer />
   </div>
 </template>

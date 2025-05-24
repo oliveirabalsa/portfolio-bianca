@@ -41,7 +41,7 @@ const projects = [
       class="relative"
       :style="`height: calc(100vh - ${HEADER_HEIGHT}px) bg-[#f3f4f6]`"
     >
-      <div class="container mx-auto py-20 h-full">
+      <div class="container px-8 md:px-0 mx-auto py-20 h-full">
         <h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-8">Projetos</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ProjectCard

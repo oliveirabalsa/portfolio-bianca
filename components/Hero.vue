@@ -18,7 +18,9 @@ const HEADER_HEIGHT = 80;
         />
         <div class="absolute inset-0 bg-black/40" />
       </div>
-      <div class="relative z-10 container mx-auto py-20 h-full text-white">
+      <div
+        class="relative z-10 container px-8 md:px-0 md:mx-auto py-20 h-full text-white"
+      >
         <h1 class="text-5xl md:text-7xl font-bold mb-2 md:mb-4">
           Olá, <br />
           sou Bianca Karoline,
@@ -27,11 +29,10 @@ const HEADER_HEIGHT = 80;
           uma designer de produtos e soluções
         </h2>
         <p class="text-lg md:text-2xl max-w-2xl mb-8">
-          Com mais de 3 anos atuando na área, transformando ideias <br />
+          Com mais de 4 anos atuando na área, transformando ideias <br />
           em experiências digitais memoráveis.
         </p>
 
-        <!-- Shadcn Button component with custom white styling -->
         <Button variant="secondary" size="lg" class="w-fit" as-child>
           <NuxtLink to="/about" class="flex items-center">
             Sobre mim
