@@ -85,7 +85,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="bg-gray-100 px-8 py-6 flex items-center justify-between font-roboto relative"
+    class="bg-gray-100 px-8 py-6 flex items-center justify-between font-roboto sticky top-0 left-0 right-0 z-50"
   >
     <div class="font-['Ultra'] text-2xl tracking-wider text-gray-900">BK</div>
     <button
