@@ -416,7 +416,7 @@ const personalValues = [
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div class="relative">
                 <img
-                  src="/images/relationship.png"
+                  src="/images/relationship.jpg"
                   alt="Relacionamento"
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
@@ -429,7 +429,7 @@ const personalValues = [
 
               <div class="relative">
                 <img
-                  src="/images/beach.png"
+                  src="/images/beach.jpg"
                   alt="Praia"
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
@@ -442,7 +442,7 @@ const personalValues = [
 
               <div class="relative">
                 <img
-                  src="/images/walk-and-run.png"
+                  src="/images/walk-and-run.jpg"
                   alt="Caminhadas e corridas"
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
