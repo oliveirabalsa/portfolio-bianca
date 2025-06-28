@@ -34,19 +34,76 @@ const companies = [
       <h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-8">
         Empresas que atuei
       </h1>
-      <div
-        class="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 place-items-center"
-      >
-        <div
-          v-for="company in companies"
-          :key="company.id"
-          :class="`flex items-center justify-center w-max ${
-            [3, 5].includes(company.id) ? 'shadow-md' : ''
-          }`"
-        >
-          <img :src="company.image" :alt="company.name" />
+
+      <!-- Slider container -->
+      <div class="overflow-hidden">
+        <div class="animate-slide flex items-center space-x-8 md:space-x-12">
+          <!-- First set of companies -->
+          <div
+            v-for="company in companies"
+            :key="`first-${company.id}`"
+            :class="`flex items-center justify-center flex-shrink-0 ${
+              [3, 5].includes(company.id) ? 'shadow-md' : ''
+            }`"
+          >
+            <img
+              :src="company.image"
+              :alt="company.name"
+              class="h-12 md:h-16 w-auto object-contain"
+            />
+          </div>
+
+          <!-- Second set for seamless loop -->
+          <div
+            v-for="company in companies"
+            :key="`second-${company.id}`"
+            :class="`flex items-center justify-center flex-shrink-0 ${
+              [3, 5].includes(company.id) ? 'shadow-md' : ''
+            }`"
+          >
+            <img
+              :src="company.image"
+              :alt="company.name"
+              class="h-12 md:h-16 w-auto object-contain"
+            />
+          </div>
+
+          <!-- Third set for better coverage -->
+          <div
+            v-for="company in companies"
+            :key="`third-${company.id}`"
+            :class="`flex items-center justify-center flex-shrink-0 ${
+              [3, 5].includes(company.id) ? 'shadow-md' : ''
+            }`"
+          >
+            <img
+              :src="company.image"
+              :alt="company.name"
+              class="h-12 md:h-16 w-auto object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.animate-slide {
+  animation: slide 15s linear infinite;
+  width: max-content;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+</style>
