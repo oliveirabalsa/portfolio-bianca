@@ -53,7 +53,6 @@ const companies = [
             />
           </div>
 
-          <!-- Second set for seamless loop -->
           <div
             v-for="company in companies"
             :key="`second-${company.id}`"
@@ -68,7 +67,6 @@ const companies = [
             />
           </div>
 
-          <!-- Third set for better coverage -->
           <div
             v-for="company in companies"
             :key="`third-${company.id}`"
