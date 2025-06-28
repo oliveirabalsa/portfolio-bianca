@@ -129,16 +129,15 @@ const personalValues = [
 </script>
 
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <Header />
 
     <!-- Hero Section with UX Pattern Background -->
     <section
-      class="relative h-[60vh] flex items-center justify-center"
+      class="relative h-[60vh] flex items-center justify-center bg-[95%_-2rem] md:bg-[100%_-2rem]"
       style="
         background-image: url('/images/background-ux.png');
         background-size: cover;
-        background-position: 100% -2rem;
         background-repeat: repeat;
         background-blend-mode: overlay;
       "
@@ -160,7 +159,7 @@ const personalValues = [
     </section>
 
     <!-- Professional Journey Section - Separate White Section -->
-    <section class="py-16 px-4 bg-gray-100">
+    <section class="py-8 md:py-16 px-4 bg-gray-100">
       <div class="max-w-6xl mx-auto">
         <!-- Title -->
         <h1
@@ -259,7 +258,7 @@ const personalValues = [
     </section>
 
     <!-- Specializations Section -->
-    <section class="py-16 px-4 bg-white">
+    <section class="py-8 md:py-16 px-4 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -273,7 +272,7 @@ const personalValues = [
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div
             v-for="spec in specializations"
             :key="spec.title"
@@ -298,7 +297,7 @@ const personalValues = [
     </section>
 
     <!-- Methodology Section -->
-    <section class="py-16 px-4 bg-gray-50">
+    <section class="py-8 md:py-16 px-4 bg-gray-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -316,13 +315,29 @@ const personalValues = [
             :key="step.number"
             class="relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
           >
+            <!-- Mobile: Number inside card -->
+            <div class="md:hidden flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold mr-4"
+              >
+                {{ step.number }}
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900">
+                {{ step.title }}
+              </h3>
+            </div>
+
+            <!-- Desktop: Number in corner -->
             <div
-              class="absolute -top-4 -left-4 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg z-10"
+              class="hidden md:flex absolute -top-5 -left-5 w-12 h-12 bg-gray-900 text-white rounded-full font-bold text-lg z-10"
+              style="align-items: center; justify-content: center"
             >
               {{ step.number }}
             </div>
 
-            <h3 class="text-xl font-semibold text-gray-900 mb-4 pt-4">
+            <h3
+              class="hidden md:block text-xl font-semibold text-gray-900 mb-4 pt-2"
+            >
               {{ step.title }}
             </h3>
 
@@ -347,7 +362,7 @@ const personalValues = [
     </section>
 
     <!-- Beyond Design Section -->
-    <section class="py-16 px-4 bg-white">
+    <section class="py-8 md:py-16 px-4 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -388,63 +403,63 @@ const personalValues = [
 
           <!-- Personal Photos -->
           <div class="space-y-4">
-            <!-- Main large image - 50% width -->
+            <!-- Main large image -->
             <div class="w-full">
               <img
                 src="/images/personal-side.png"
                 alt="Meu lado pessoal"
-                class="rounded-2xl w-full h-80 object-cover shadow-lg"
+                class="rounded-2xl w-full h-64 md:h-80 object-cover shadow-lg"
               />
             </div>
 
-            <!-- Three smaller images in a row -->
-          </div>
-        </div>
-      </div>
-      <div class="grid grid-cols-3 gap-4 max-w-6xl mx-auto mt-4">
-        <div class="relative">
-          <img
-            src="/images/relationship.svg"
-            alt="Relacionamento"
-            class="rounded-2xl w-full h-48 object-cover shadow-lg"
-          />
-          <div
-            class="absolute bottom-4 left-4 text-white font-semibold text-lg px-3 py-1 rounded"
-          >
-            Relacionamento
-          </div>
-        </div>
+            <!-- Three smaller images in a row - responsive -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="relative">
+                <img
+                  src="/images/relationship.png"
+                  alt="Relacionamento"
+                  class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
+                />
+                <div
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
+                >
+                  Relacionamento
+                </div>
+              </div>
 
-        <div class="relative">
-          <img
-            src="/images/beach.png"
-            alt="Praia"
-            class="rounded-2xl w-full h-48 object-cover shadow-lg"
-          />
-          <div
-            class="absolute bottom-4 left-4 text-white font-semibold text-lg px-3 py-1 rounded"
-          >
-            Praia
-          </div>
-        </div>
+              <div class="relative">
+                <img
+                  src="/images/beach.png"
+                  alt="Praia"
+                  class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
+                />
+                <div
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
+                >
+                  Praia
+                </div>
+              </div>
 
-        <div class="relative">
-          <img
-            src="/images/walk-and-run.png"
-            alt="Caminhadas e corridas"
-            class="rounded-2xl w-full h-48 object-cover shadow-lg"
-          />
-          <div
-            class="absolute bottom-4 left-4 text-white font-semibold text-lg px-3 py-1 rounded"
-          >
-            Caminhadas e corridas
+              <div class="relative">
+                <img
+                  src="/images/walk-and-run.png"
+                  alt="Caminhadas e corridas"
+                  class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
+                />
+                <div
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
+                >
+                  Caminhadas e corridas
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Personal Values Section -->
-    <section class="py-16 px-4 bg-gray-50">
+    <section class="py-8 md:py-16 px-4 bg-gray-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -452,7 +467,7 @@ const personalValues = [
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div
             v-for="value in personalValues"
             :key="value.title"
