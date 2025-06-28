@@ -421,7 +421,7 @@ const personalValues = [
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
                 <div
-                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm px-2 py-1 rounded"
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
                 >
                   Relacionamento
                 </div>
@@ -434,7 +434,7 @@ const personalValues = [
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
                 <div
-                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm px-2 py-1 rounded"
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
                 >
                   Praia
                 </div>
@@ -447,7 +447,7 @@ const personalValues = [
                   class="rounded-2xl w-full h-40 sm:h-32 md:h-40 object-cover shadow-lg"
                 />
                 <div
-                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm px-2 py-1 rounded"
+                  class="absolute bottom-2 left-2 text-white font-medium text-sm sm:text-xs md:text-sm bg-black/50 px-2 py-1 rounded"
                 >
                   Caminhadas e corridas
                 </div>
