@@ -4,7 +4,8 @@
 <template>
   <div>
     <Header />
-    <UnderConstruction />
+    <ProjectsHeader />
+    <ProjectsAbout />
     <ContactSection />
     <Footer />
   </div>
