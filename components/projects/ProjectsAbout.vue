@@ -77,7 +77,6 @@
 import { ProjectAbout, ProjectChallenge, ProjectObjective } from '@/lib/projetc-data';
 import iconDanger from '/public/images/icon-danger.svg'
 import iconCheck from '/public/images/icon-check.svg'
-import mentorCycle from '/public/images/mentorCycle.png'
 
 interface Props {
   titleAbout?: string;

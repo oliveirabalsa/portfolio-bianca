@@ -6,6 +6,7 @@
     <Header />
     <ProjectsHeader />
     <ProjectsAbout />
+    <ProjectsDesign />
     <ContactSection />
     <Footer />
   </div>
