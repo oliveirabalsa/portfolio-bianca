@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ProjectsFlowchart from '~/components/projects/ProjectsFlowchart.vue';
+
 // Component logic here
 </script>
 <template>
@@ -7,6 +9,7 @@
     <ProjectsHeader />
     <ProjectsAbout />
     <ProjectsDesign />
+    <ProjectsFlowchart />
     <ContactSection />
     <Footer />
   </div>

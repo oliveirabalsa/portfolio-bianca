@@ -67,3 +67,9 @@ export const ProjectDevelopment = {
     title: 'Desenvolvimento e iteração',
     description: 'Implementamos a versão final com base nos insights coletados, lançando primeiro fase.'
 }
+
+export const ProjectFlowchart = {
+    title: 'Fluxograma do site',
+    description: 'Desenhamos um fluxograma detalhado da navegação na plataforma, destacando os principais caminhos do usuário'
+
+}
