@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ProjectsFlowchart from '~/components/projects/ProjectsFlowchart.vue';
 
 // Component logic here
 </script>
@@ -10,6 +9,8 @@ import ProjectsFlowchart from '~/components/projects/ProjectsFlowchart.vue';
     <ProjectsAbout />
     <ProjectsDesign />
     <ProjectsFlowchart />
+    <ProjectsIdeation />
+    <ProjectsPrototype />
     <ContactSection />
     <Footer />
   </div>

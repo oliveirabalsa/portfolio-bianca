@@ -71,5 +71,23 @@ export const ProjectDevelopment = {
 export const ProjectFlowchart = {
     title: 'Fluxograma do site',
     description: 'Desenhamos um fluxograma detalhado da navegação na plataforma, destacando os principais caminhos do usuário'
+}
 
+export const ProjectIdeation = {
+    title: 'Definição e Ideação',
+    insights: {
+        title: 'Principais Insights',
+        tips: [
+            'Criar um painel de acompanhamento com marcos de progresso.',
+            'Desenvolver templates para estruturar encontros e registrar feedbacks.'
+        ]
+    },
+    solution: {
+        title: 'Solução e resposta',
+        description: 'Uma plataforma que conecta mentores e mentorados, permitindo:',
+        tips: [
+            'Criar um painel de acompanhamento com marcos de progresso.',
+            'Desenvolver templates para estruturar encontros e registrar feedbacks.'
+        ]
+    }
 }
