@@ -1,10 +1,17 @@
 <script setup lang="ts">
+
 // Component logic here
 </script>
 <template>
   <div>
     <Header />
-    <UnderConstruction />
+    <ProjectsHeader />
+    <ProjectsAbout />
+    <ProjectsDesign />
+    <ProjectsFlowchart />
+    <ProjectsIdeation />
+    <ProjectsPrototype />
+    <ProjectsOthers />
     <ContactSection />
     <Footer />
   </div>
