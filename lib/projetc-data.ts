@@ -91,3 +91,36 @@ export const ProjectIdeation = {
         ]
     }
 }
+
+export const Projects = {
+    title: 'Projetos',
+    projects: [
+        {
+            id: 1,
+            title: "Sou Junior",
+            description: "Portal de vagas em projeto open source. Portal de cadastramentos e anúncios de vagas.",
+            tags: ["Mobile", "E-commerce", "UX Research"],
+            image: "/images/soujunior-card.png",
+            to: "#",
+        },
+        {
+            id: 2,
+            title: "Balsacar",
+            description:
+                "Venha transformar a venda de carros no Brasil. Lading page dedicada a anúncio e vendas de carros.",
+            tags: ["Mobile", "Streaming", "Design System"],
+            image: "/images/balsacar-card.png",
+            to: "#",
+        },
+        {
+            id: 3,
+            title: "Paróquia Santo André Apóstolo",
+            description:
+                "Transformando a fé mais acessível, através da tecnologia. Página dedicada a Paróquia Santo André Apóstolo - SP",
+            tags: ["Mobile", "Streaming", "Design System"],
+            image: "/images/paroquia-card.png",
+            to: "#",
+        },
+    ]
+}
+

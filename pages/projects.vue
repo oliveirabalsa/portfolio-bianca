@@ -11,6 +11,7 @@
     <ProjectsFlowchart />
     <ProjectsIdeation />
     <ProjectsPrototype />
+    <ProjectsOthers />
     <ContactSection />
     <Footer />
   </div>

@@ -51,6 +51,7 @@ const projects = [
             :description="project.description"
             :tags="project.tags"
             :image="project.image"
+            variant="default"
           />
         </div>
       </div>
