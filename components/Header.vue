@@ -5,7 +5,6 @@ import { useRoute } from "vue-router";
 const navItems = [
   { name: "Home", to: "/" },
   { name: "Sobre", to: "/about" },
-  { name: "Projetos", to: "/projects" },
   { name: "Contato", to: "/contact" },
 ];
 
@@ -15,11 +14,11 @@ const lineLeft = ref(0);
 const lineWidth = ref(0);
 const isMenuOpen = ref(false);
 
-const isActive = (to) => route.path === to;
+const isActive = (to: string) => route.path === to;
 
 function getNavLinks() {
   if (!navList.value) return [];
-  return [...navList.value.querySelectorAll("a")];
+  return [...(navList.value as unknown as HTMLElement).querySelectorAll("a")];
 }
 
 function positionLineToActive() {
@@ -35,17 +34,19 @@ function positionLineToActive() {
   positionLine(activeLink);
 }
 
-function positionLine(element) {
+function positionLine(element: HTMLElement) {
   if (!element || !navList.value) return;
 
   const rect = element.getBoundingClientRect();
-  const navRect = navList.value.getBoundingClientRect();
+  const navRect = (
+    navList.value as unknown as HTMLElement
+  ).getBoundingClientRect();
 
   lineLeft.value = rect.left - navRect.left;
   lineWidth.value = rect.width;
 }
 
-function moveLine(element) {
+function moveLine(element: HTMLElement) {
   positionLine(element);
 }
 
@@ -73,7 +74,7 @@ watch(
   () => {
     closeMenu();
     positionLineToActive();
-  }
+  },
 );
 
 onMounted(() => {
