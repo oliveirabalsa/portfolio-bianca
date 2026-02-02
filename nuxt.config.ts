@@ -3,6 +3,11 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+    },
+  },
   css: ["~/assets/css/main.css"],
   components: ["~/components", "~/components/about"],
   vite: {
