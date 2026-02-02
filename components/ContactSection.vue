@@ -29,7 +29,7 @@
         <ContactButton
           icon="logos:linkedin-icon"
           label="Linkedin"
-          href="https://linkedin.com/in/bianca-karoline"
+          href="https://www.linkedin.com/in/biancakaroline-uxui"
           variant="linkedin"
         />
       </div>
