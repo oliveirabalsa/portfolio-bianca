@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { Projects } from '@/lib/projetc-data';
-import ProjectCard from '@/components/ProjectCard.vue';
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import { Projects } from "@/lib/projetc-data";
+import ProjectCard from "@/components/ProjectCard.vue";
 
 interface Project {
     id: number;
@@ -17,6 +19,15 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
     projects: () => Projects.projects,
 });
+
+const route = useRoute();
+const visibleProjects = computed(() => {
+    const currentPath = route.path.replace(/^\/+|\/+$/g, "");
+    if (!currentPath) return props.projects;
+    return props.projects.filter(
+        (project) => project.to.replace(/^\/+|\/+$/g, "") !== currentPath,
+    );
+});
 </script>
 
 <template>
@@ -29,7 +40,7 @@ const props = withDefaults(defineProps<Props>(), {
             <div class="w-20 h-1 bg-[#4F46E5] mx-auto mb-20"></div>
         </section>
         <section class="w-full max-w-[1216px] mx-auto py-4 flex flex-col gap-6 xl:flex-row items-center justify-center">
-            <NuxtLink v-for="project in projects" :key="project.id" :to="project.to" class="hover:translate-y-[-10px] transition-all duration-300">
+            <NuxtLink v-for="project in visibleProjects" :key="project.id" :to="project.to" class="hover:translate-y-[-10px] transition-all duration-300">
                 <ProjectCard
                 :key="project.id"
                 :title="project.title"
