@@ -32,7 +32,7 @@ const projects = [
     <div class="relative" :style="`height: calc(100vh - 80px); bg-[#f3f4f6]`">
       <div class="container px-8 md:px-0 mx-auto py-20 h-full">
         <h1 class="text-4xl md:text-5xl font-bold mb-2 md:mb-8">Projetos</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6">
           <ProjectCard
             v-for="project in projects"
             :key="project.id"
@@ -41,6 +41,7 @@ const projects = [
             :tags="project.tags"
             :image="project.image"
             variant="default"
+            :expand="true"
             @click="project.onClick ? project.onClick() : null"
           />
         </div>
