@@ -19,6 +19,10 @@ withDefaults(
     /** Optional override from `lg` up — the Figma mobile and desktop frames
      *  crop the same photo to different proportions. */
     ratioLg?: string;
+    /** `object-position` for the photo. The sources are portrait and the well
+     *  is landscape, so the default 50% 50% crop can cut off a face — set the
+     *  subject's vertical position instead of relying on centring. */
+    focal?: string;
     tapeTone?: "butter" | "blush" | "sky" | "sage" | "white";
     tapeAlign?: "left" | "center" | "right";
     /** Lift and straighten slightly on hover. */
@@ -30,6 +34,7 @@ withDefaults(
   {
     caption: undefined,
     ratioLg: undefined,
+    focal: "50% 50%",
     tilt: -6,
     ratio: "4/5",
     tapeTone: "butter",
@@ -65,6 +70,7 @@ const CAPTION_SIZE = {
         loading="lazy"
         decoding="async"
         class="h-full w-full object-cover"
+        :style="{ objectPosition: focal }"
       />
     </div>
 

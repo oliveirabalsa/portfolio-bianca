@@ -32,6 +32,7 @@ import { beyond } from "~/lib/content/about";
           :tilt="0"
           ratio="5/4"
           ratio-lg="7/8"
+          :focal="beyond.mainPhoto.focal"
           :tape-tone="beyond.mainPhoto.tapeTone"
           tape-align="right"
         />
@@ -53,6 +54,7 @@ import { beyond } from "~/lib/content/about";
           :caption="photo.caption"
           :tilt="0"
           ratio="5/4"
+          :focal="photo.focal"
           :tape-tone="photo.tapeTone"
           tape-align="left"
         />

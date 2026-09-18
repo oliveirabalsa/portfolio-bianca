@@ -200,6 +200,8 @@ export const beyond = {
     alt: "Bianca em frente ao Coliseu, em Roma",
     tapeTone: "blush" as const,
     tilt: 1.5,
+    /** Landscape source — centring is already right. */
+    focal: "50% 50%",
   },
   /** Landscape crops — three across on desktop (29:50), stacked on mobile. */
   gallery: [
@@ -209,6 +211,8 @@ export const beyond = {
       alt: "Bianca e o esposo em viagem",
       tilt: -1.8,
       tapeTone: "butter" as const,
+      /** Faces sit at ~60% of the 900×1200 source. */
+      focal: "50% 62%",
     },
     {
       src: "/img/beyond-beach.jpg",
@@ -216,6 +220,9 @@ export const beyond = {
       alt: "Bianca em frente ao letreiro da Isla Mujeres",
       tilt: 1.6,
       tapeTone: "sky" as const,
+      /** Keeps her head and the letters; a 5:4 well cannot hold the whole
+       *  figure of a 675×1200 source. */
+      focal: "50% 34%",
     },
     {
       src: "/img/beyond-running.jpg",
@@ -223,6 +230,9 @@ export const beyond = {
       alt: "Bianca em uma corrida de rua",
       tilt: -1.3,
       tapeTone: "sage" as const,
+      /** Her face is at 10–20% of the 800×1200 source, so the default centred
+       *  crop started below it entirely. */
+      focal: "50% 16%",
     },
   ],
 } as const;
