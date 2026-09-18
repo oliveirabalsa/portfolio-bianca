@@ -39,14 +39,19 @@ import { beyond } from "~/lib/content/about";
       </div>
     </div>
 
-    <!-- Three 410.67px columns at x 0/450.67/901.33 (29:50); stacked full
-         width on mobile, where the landscape crop is kept. -->
-    <ul class="m-0 mt-8 grid list-none grid-cols-1 gap-8 p-0 lg:mt-10 lg:grid-cols-3 lg:gap-10">
+    <!-- Figma lays out three 410.67px columns at x 0/450.67/901.33 (29:50).
+         With the running shot dropped, the row keeps that 31.3% photo width
+         and centres instead of stretching: two photos spread across the full
+         1312px column would be half again as tall as the design and push the
+         rest of the page down. -->
+    <ul
+      class="m-0 mt-8 flex list-none flex-col gap-8 p-0 lg:mt-10 lg:flex-row lg:justify-center lg:gap-10"
+    >
       <li
         v-for="(photo, i) in beyond.gallery"
         :key="photo.caption"
         v-reveal="{ tilt: photo.tilt, delay: 90 * i }"
-        class="reveal-tilt"
+        class="reveal-tilt lg:w-[31.3%]"
       >
         <BasePolaroid
           :src="photo.src"

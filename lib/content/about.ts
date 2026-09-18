@@ -203,7 +203,9 @@ export const beyond = {
     /** Landscape source — centring is already right. */
     focal: "50% 50%",
   },
-  /** Landscape crops — three across on desktop (29:50), stacked on mobile. */
+  /** Landscape crops, side by side on desktop (29:50) and stacked on mobile.
+   *  Figma has three here; the running shot was dropped at the designer's
+   *  request, so the row lays out from `gallery.length`. */
   gallery: [
     {
       src: "/img/beyond-couple.jpg",
@@ -223,16 +225,6 @@ export const beyond = {
       /** Keeps her head and the letters; a 5:4 well cannot hold the whole
        *  figure of a 675×1200 source. */
       focal: "50% 34%",
-    },
-    {
-      src: "/img/beyond-running.jpg",
-      caption: "caminhadas e corridas",
-      alt: "Bianca em uma corrida de rua",
-      tilt: -1.3,
-      tapeTone: "sage" as const,
-      /** Her face is at 10–20% of the 800×1200 source, so the default centred
-       *  crop started below it entirely. */
-      focal: "50% 16%",
     },
   ],
 } as const;
