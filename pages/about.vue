@@ -1,26 +1,21 @@
 <script setup lang="ts">
-useHead({
-  title: "Sobre - Bianca Karoline",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Conheça minha jornada profissional como UX/UI Designer, minhas especialidades e metodologia de trabalho.",
-    },
-  ],
+useSeoMeta({
+  title: "Sobre mim · Bianca Karoline",
+  description:
+    "Product Designer com mais de 5 anos de experiência nos mercados financeiro, de adquirência e de previdência. Formação, metodologia de trabalho e trajetória.",
 });
 </script>
 
 <template>
-  <div class="overflow-x-hidden">
-    <Header />
-    <ProfileHero />
-    <ProfessionalJourney />
-    <Specializations />
-    <WorkMethodology />
-    <BeyondDesign />
-    <PersonalValues />
-    <ContactSection />
-    <Footer />
-  </div>
+  <NuxtLayout>
+    <AboutHero />
+    <AboutEducation />
+    <AboutManifesto />
+    <AboutSpecialties />
+    <AboutMethodology />
+    <AboutExperience />
+    <AboutBeyond />
+    <AboutPersonalValues />
+    <LayoutContactCta kicker="vamos conversar?" variant="stack" />
+  </NuxtLayout>
 </template>
